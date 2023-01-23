@@ -65,7 +65,7 @@ If at least one prohibition added, scrolling on the document element stays disab
 
 ```
 @description
-Disables the scrolling on the document element by setting a scroll prohibition.
+Disables the scrolling on the document element.
 ```
 
 ```
@@ -104,7 +104,8 @@ Disables the scrolling on the document element by setting a scroll prohibition.
 
 ```
 @description
-If document element scrolling previously disabled, this function makes it enabled again.
+If the document element scrolling previously disabled, this function makes
+it enabled again.
 Removes all previously set scroll prohibitions as well.
 ```
 

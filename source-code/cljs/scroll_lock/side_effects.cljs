@@ -61,7 +61,8 @@
 
 (defn enable-scroll!
   ; @description
-  ; If document element scrolling previously disabled, this function makes it enabled again.
+  ; If the document element scrolling previously disabled, this function makes
+  ; it enabled again.
   ; Removes all previously set scroll prohibitions as well.
   ;
   ; @usage
@@ -72,7 +73,7 @@
 
 (defn disable-scroll!
   ; @description
-  ; Disables the scrolling on the document element by setting a scroll prohibition.
+  ; Disables the scrolling on the document element.
   ;
   ; @usage
   ; (disable-scroll!)

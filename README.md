@@ -64,7 +64,7 @@ Sometimes we need to manage complex scroll locking logic, when the good old
 lock / unlock / is-locked? functions no longer enough. In cases like that
 the [`add-scroll-prohibition!`](documentation/cljs/scroll-lock/API.md/#add-scroll-prohibition)
 and the [`remove-scroll-prohibition!`](documentation/cljs/scroll-lock/API.md/#remove-scroll-prohibition)
-functions could help us. By these functions we can add or remove locks independently
+functions could help us. With these functions we can add or remove locks independently
 from each other and the scroll stays locked until the last one removed.
 
 For example a modal pops up and it locks the scroll by adding a prohibition with
@@ -95,4 +95,4 @@ UI elements. They are as simple as possible: a modal pops up and adds a lock,
 then it closes and removes its previously added lock.
 
 In cases like that, the prohibition handler does the plumbing and the only thing
-we have to do is that to use unique IDs when we add or remove a scroll locks.
+we have to do is that to use unique IDs when we add or remove scroll locks.
