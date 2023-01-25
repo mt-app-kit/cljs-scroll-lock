@@ -39,7 +39,7 @@ If at least one prohibition added, scrolling on the document element stays disab
 ```
 (defn add-scroll-prohibition!
   [prohibition-id]
-  (if (helpers/any-scroll-prohibition-added?)
+  (if (env/any-scroll-prohibition-added?)
       (do (swap! state/PROHIBITIONS assoc prohibition-id true))
       (do (swap! state/PROHIBITIONS assoc prohibition-id true)
           (disable-dom-scroll!))))
@@ -79,7 +79,7 @@ Disables the scrolling on the document element.
 ```
 (defn disable-scroll!
   []
-  (when-not (helpers/any-scroll-prohibition-added?)
+  (when-not (env/any-scroll-prohibition-added?)
             (swap! state/PROHIBITIONS assoc ::default-prohibition true)
             (disable-dom-scroll!)))
 ```
@@ -164,9 +164,9 @@ was the last one and no more prohibition added.
 ```
 (defn remove-scroll-prohibition!
   [prohibition-id]
-  (when (helpers/scroll-prohibition-added? prohibition-id)
+  (when (env/scroll-prohibition-added? prohibition-id)
         (swap! state/PROHIBITIONS dissoc prohibition-id)
-        (if-not (helpers/any-scroll-prohibition-added?)
+        (if-not (env/any-scroll-prohibition-added?)
                 (enable-dom-scroll!))))
 ```
 

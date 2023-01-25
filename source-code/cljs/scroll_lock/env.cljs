@@ -1,5 +1,5 @@
 
-(ns scroll-lock.helpers
+(ns scroll-lock.env
     (:require [dom.api           :as dom]
               [scroll-lock.state :as state]))
 

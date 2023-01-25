@@ -1,11 +1,11 @@
 
 (ns scroll-lock.side-effects
-    (:require [css.api             :as css]
-              [dom.api             :as dom]
-              [math.api            :as math]
-              [scroll-lock.helpers :as helpers]
-              [scroll-lock.state   :as state]
-              [string.api          :as string]))
+    (:require [css.api           :as css]
+              [dom.api           :as dom]
+              [math.api          :as math]
+              [scroll-lock.env   :as env]
+              [scroll-lock.state :as state]
+              [string.api        :as string]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -48,7 +48,7 @@
   ; CSS setting. Therefore when enabling the scroll, this setting should be avoided
   ; and instead of replacing the {overflow-y: hidden} with {overflow-y: scroll}
   ; setting the overflow-y property has to be simply removed!
-  (if (helpers/dom-scroll-disabled?)
+  (if (env/dom-scroll-disabled?)
       (let [body-top (dom/get-body-style-value "top")
             scroll-y (-> body-top string/to-integer math/positive)]
            (dom/remove-element-style-value! (dom/get-document-element) "overflow-y")
@@ -78,7 +78,7 @@
   ; @usage
   ; (disable-scroll!)
   []
-  (when-not (helpers/any-scroll-prohibition-added?)
+  (when-not (env/any-scroll-prohibition-added?)
             (swap! state/PROHIBITIONS assoc ::default-prohibition true)
             (disable-dom-scroll!)))
 
@@ -97,7 +97,7 @@
   ; @usage
   ; (add-scroll-prohibition! :my-prohibition)
   [prohibition-id]
-  (if (helpers/any-scroll-prohibition-added?)
+  (if (env/any-scroll-prohibition-added?)
       (do (swap! state/PROHIBITIONS assoc prohibition-id true))
       (do (swap! state/PROHIBITIONS assoc prohibition-id true)
           (disable-dom-scroll!))))
@@ -114,7 +114,7 @@
   ; @usage
   ; (remove-scroll-prohibition! :my-prohibition)
   [prohibition-id]
-  (when (helpers/scroll-prohibition-added? prohibition-id)
+  (when (env/scroll-prohibition-added? prohibition-id)
         (swap! state/PROHIBITIONS dissoc prohibition-id)
-        (if-not (helpers/any-scroll-prohibition-added?)
+        (if-not (env/any-scroll-prohibition-added?)
                 (enable-dom-scroll!))))
