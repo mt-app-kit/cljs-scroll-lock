@@ -6,9 +6,6 @@
 The <strong>cljs-scroll-lock</strong> is a simple ClojureScript library to controlling
 the scrollability of the HTML document element.
 
-You can add more than one prohibition with unique IDs, and if at least one prohibition
-added, the scroll stays disabled.
-
 ### deps.edn
 
 ```
@@ -61,8 +58,8 @@ function.
 ### How to manage more than one scroll locks at a time?
 
 Sometimes we need to manage complex scroll locking logic, when the good old
-lock / unlock / is-locked? functions no longer enough. In cases like that
-the [`add-scroll-prohibition!`](documentation/cljs/scroll-lock/API.md/#add-scroll-prohibition)
+lock / unlock / is-locked? functions no longer enough. In this case the
+[`add-scroll-prohibition!`](documentation/cljs/scroll-lock/API.md/#add-scroll-prohibition)
 and the [`remove-scroll-prohibition!`](documentation/cljs/scroll-lock/API.md/#remove-scroll-prohibition)
 functions could help us. With these functions we can add or remove locks independently
 from each other and the scroll stays locked until the last one removed.
@@ -92,7 +89,7 @@ modal removes its own lock) but we don't want the scroll to be reenabled again
 because the first modal is still visible on the screen. And of course we don't
 want the modals to know anything about each other because they are independent
 UI elements. They are as simple as possible: a modal pops up and adds a lock,
-then it closes and removes its previously added lock.
+then it closes and removes its own lock.
 
-In cases like that, the prohibition handler does the plumbing and the only thing
-we have to do is that to use unique IDs when we add or remove scroll locks.
+The prohibition handler does the plumbing and the only thing we have to do is
+that to use unique IDs when we add or remove scroll locks.
