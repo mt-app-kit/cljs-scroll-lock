@@ -25,6 +25,8 @@ The <strong>cljs-scroll-lock</strong> functional documentation is [available her
 
 You can track the changes of the <strong>cljs-scroll-lock</strong> library [here](CHANGES.md).
 
+# Usage
+
 ### Index
 
 - [How to lock the scrolling?](#how-to-lock-the-scrolling)
@@ -32,8 +34,6 @@ You can track the changes of the <strong>cljs-scroll-lock</strong> library [here
 - [How to unlock the scrolling?](#how-to-unlock-the-scrolling)
 
 - [How to manage more than one scroll locks at a time?](#how-to-manage-more-than-one-scroll-locks-at-a-time)
-
-# Usage
 
 ### How to lock the scrolling?
 
