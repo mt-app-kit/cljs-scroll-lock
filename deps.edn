@@ -1,6 +1,6 @@
 
 {:paths ["source-code/cljs"]
  :deps  {bithandshake/cljc-fruits {:git/url "https://github.com/bithandshake/cljc-fruits"
-                                   :sha     "09623b3f2e682850e09c68b3c7ce42e00b388641"}
+                                   :sha     "1290883eaf834acf6e7487829c02ee0385487874"}
          bithandshake/cljs-dom    {:git/url "https://github.com/bithandshake/cljs-dom"
-                                   :sha     "2a33e0af3dea59a7b9ce9e9ff43b3aafbb8bf7ee"}}}
+                                   :sha     "8b737b0395261513c18c07c221ada89819444557"}}}
