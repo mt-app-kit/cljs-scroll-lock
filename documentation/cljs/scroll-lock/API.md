@@ -1,5 +1,9 @@
 
-# scroll-lock.api ClojureScript namespace
+### scroll-lock.api
+
+Functional documentation of the scroll-lock.api ClojureScript namespace
+
+---
 
 ##### [README](../../../README.md) > [DOCUMENTATION](../../COVER.md) > scroll-lock.api
 
@@ -12,6 +16,8 @@
 - [enable-scroll!](#enable-scroll)
 
 - [remove-scroll-prohibition!](#remove-scroll-prohibition)
+
+---
 
 ### add-scroll-prohibition!
 
@@ -186,5 +192,5 @@ was the last one and no more prohibition added.
 
 ---
 
-This documentation is generated with the [clj-docs-generator](https://github.com/bithandshake/clj-docs-generator) engine.
+<sub>This documentation is generated with the [clj-docs-generator](https://github.com/bithandshake/clj-docs-generator) engine.</sub>
 
