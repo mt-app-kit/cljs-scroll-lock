@@ -35,8 +35,8 @@
   ; ... sets the scroll Y value the last Y axis offset of the BODY element
   ; ... removes the previously set mark from the HTML element
   ;
-  ; Before enabling the DOM scroll, it has to be checked whether the scroll isn't
-  ; already enabled!
+  ; Before enabling the DOM scroll, it must be checked whether the scroll hasn't
+  ; been already enabled!
   ; If the scroll is already enabled, reenabling it might sets the scroll Y
   ; value to '0px', because the Y axis offset of the BODY element is '0px'
   ; when the scroll is NOT disabled!
@@ -45,9 +45,9 @@
   ; Google Chrome for mobile 90.0 (Google Android ?, Samsung S8+)
   ; The React package @dnd-kit/sortable (version ?) has components which cannot
   ; read the scroll Y value in case of the HTML element has the {overflow-y: scroll}
-  ; CSS setting. Therefore when enabling the scroll, this setting should be avoided
+  ; CSS setting. Therefore, when enabling the scroll, this setting should be avoided
   ; and instead of replacing the {overflow-y: hidden} with {overflow-y: scroll}
-  ; setting the overflow-y property has to be simply removed!
+  ; setting the 'overflow-y' property has to be removed!
   (if (env/dom-scroll-disabled?)
       (let [body-top (dom/get-body-style-value "top")
             scroll-y (-> body-top string/to-integer math/positive)]
