@@ -5,7 +5,7 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; scroll-lock.side-effects
+; @redirect (scroll-lock.side-effects)
 (def enable-scroll!             side-effects/enable-scroll!)
 (def disable-scroll!            side-effects/disable-scroll!)
 (def add-scroll-prohibition!    side-effects/add-scroll-prohibition!)
