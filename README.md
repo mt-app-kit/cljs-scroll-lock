@@ -10,7 +10,7 @@ the scrollability of the HTML document element.
 
 ```
 {:deps {bithandshake/cljs-scroll-lock {:git/url "https://github.com/bithandshake/cljs-scroll-lock"
-                                       :sha     "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"}}
+                                       :sha     "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"}}}
 ```
 
 ### Current version
