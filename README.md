@@ -3,8 +3,7 @@
 
 ### Overview
 
-The <strong>cljs-scroll-lock</strong> is a simple ClojureScript library to controlling
-the scrollability of the HTML document element.
+The <strong>cljs-scroll-lock</strong> is a simple HTML document element scroll lock controller for Clojure projects.
 
 ### deps.edn
 
