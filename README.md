@@ -35,7 +35,7 @@ You can track the changes of the <strong>cljs-scroll-lock</strong> library [here
 
 - [How to unlock the scrolling?](#how-to-unlock-the-scrolling)
 
-- [How to manage more than one scroll locks at a time?](#how-to-manage-more-than-one-scroll-locks-at-a-time)
+- [How to manage multiple scroll locks?](#how-to-manage-multiple-scroll-locks)
 
 ### How to lock the scrolling?
 
@@ -57,7 +57,7 @@ function.
 (enable-scroll!)
 ```
 
-### How to manage more than one scroll locks at a time?
+### How to manage multiple scroll locks?
 
 Sometimes we need to manage complex scroll locking logic, when the good old
 lock / unlock / is-locked? functions no longer enough. In this case the
