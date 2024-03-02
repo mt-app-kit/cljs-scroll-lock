@@ -3,5 +3,5 @@
  :deps  {bithandshake/cljc-fruits  {:git/url "https://github.com/bithandshake/cljc-fruits"
                                     :sha     "dd0335ef3e68416663a2f377e88ca92a3d7718fb"}
          bithandshake/cljs-dom     {:git/url "https://github.com/bithandshake/cljs-dom"
-                                    :sha     "d7fec020553734c950491ef61d9cb1dcad7cf103"}
+                                    :sha     "796be68753dc3c2c5bceff64c918ea54ed0f5c54"}
          org.clojure/clojurescript {:mvn/version "1.10.891"}}}
