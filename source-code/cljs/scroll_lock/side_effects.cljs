@@ -19,12 +19,14 @@
   ; ... sets the BODY element 'width' property to '100%' (to avoid its collapsing)
   ; ... moves the BODY element (BTT) with the last scroll Y value (Y axis offset)
   ; ... marks the HTML element by a data attribute
-  (let [scroll-y   (dom/get-scroll-y)
-        body-top   (math/negative scroll-y)
-        body-style {:position "fixed" :width "100%" :top (css/px body-top)}]
-       (dom/set-element-style-value! (dom/get-document-element) "overflow-y" "hidden")
-       (dom/set-element-style!       (dom/get-body-element) body-style)
-       (dom/set-element-attribute!   (dom/get-document-element) "data-scroll-locked" "true")))
+  (let [scroll-y            (dom/get-scroll-y)
+        body-top            (math/negative scroll-y)
+        body-style          {:position :fixed :width :100% :top (css/px body-top)}
+        document-style      {:overflow-y :hidden}
+        document-attributes {:data-scroll-locked true}]
+       (dom/merge-element-inline-style! (dom/get-document-element) document-style)
+       (dom/merge-element-inline-style! (dom/get-body-element)     body-style)
+       (dom/merge-element-attributes!   (dom/get-document-element) document-attributes)))
 
 (defn enable-dom-scroll!
   ; @ignore
@@ -49,12 +51,17 @@
   ; and instead of replacing the {overflow-y: hidden} with {overflow-y: scroll}
   ; setting the 'overflow-y' property has to be removed!
   (if (env/dom-scroll-disabled?)
-      (let [body-top (dom/get-body-style-value "top")
+      (let [body-top (dom/get-body-inline-style-value "top")
             scroll-y (-> body-top string/to-integer math/positive)]
-           (dom/remove-element-style-value! (dom/get-document-element) "overflow-y")
-           (dom/remove-element-style!       (dom/get-body-element))
+
+            ; remember what was the inline style values of position width overflow-y and top before tha scroll was locked to restore its original state!!!!!
+
+           (dom/remove-element-inline-style-value! (dom/get-document-element) "overflow-y")
+           (dom/remove-element-inline-style-value! (dom/get-body-element) "position")
+           (dom/remove-element-inline-style-value! (dom/get-body-element) "width")
+           (dom/remove-element-inline-style-value! (dom/get-body-element) "top")
            (dom/set-scroll-y! scroll-y)
-           (dom/remove-element-attribute!   (dom/get-document-element) "data-scroll-locked"))))
+           (dom/remove-element-attribute!          (dom/get-document-element) "data-scroll-locked"))))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
