@@ -72,7 +72,7 @@
 
 (defn add-scroll-prohibition!
   ; @description
-  ; Disables scrolling on the HTML element.
+  ; Registers a scroll prohibition that disables scrolling on the HTML element.
   ;
   ; @param (keyword) prohibition-id
   ;
@@ -85,7 +85,7 @@
 
 (defn remove-scroll-prohibition!
   ; @description
-  ; Removes a specific scroll prohibition.
+  ; Removes a specific scroll prohibition and re-enables scrolling if not other prohibition is added.
   ;
   ; @param (keyword) prohibition-id
   ;

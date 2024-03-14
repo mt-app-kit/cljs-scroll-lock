@@ -17,7 +17,7 @@
 ; ;; Registers a scroll prohibition that disables scrolling on the HTML element.
 ; (add-scroll-prohibition! :my-prohibition)
 ;
-; ;; Removes a the registered scroll prohibition and re-enables scrolling if not other prohibition is added.
+; ;; Removes a specific scroll prohibition and re-enables scrolling if not other prohibition is added.
 ; (remove-scroll-prohibition! :my-prohibition)
 
 ;; ----------------------------------------------------------------------------
