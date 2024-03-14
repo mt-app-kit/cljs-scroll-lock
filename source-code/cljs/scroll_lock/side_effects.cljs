@@ -37,7 +37,7 @@
   ; ... sets the scroll Y value the last Y axis offset of the BODY element
   ; ... removes the previously set mark from the HTML element
   ;
-  ; Before enabling the DOM scroll, it must be checked whether the scroll hasn't
+  ; Before enabling the DOM scroll, it must be checked whether the scroll has not
   ; been already enabled!
   ; If the scroll is already enabled, reenabling it might sets the scroll Y
   ; value to '0px', because the Y axis offset of the BODY element is '0px'

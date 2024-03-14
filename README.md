@@ -16,13 +16,13 @@ The <strong>cljs-scroll-lock</strong> is a simple HTML document element scroll l
 
 Check out the latest commit on the [release branch](https://github.com/bithandshake/cljs-scroll-lock/tree/release).
 
-### Documentation
-
-The <strong>cljs-scroll-lock</strong> functional documentation is [available here](https://bithandshake.github.io/cljs-scroll-lock).
-
 ### Changelog
 
 You can track the changes of the <strong>cljs-scroll-lock</strong> library [here](CHANGES.md).
+
+# Documentation
+
+The <strong>cljs-scroll-lock</strong> functional documentation is [available here](https://bithandshake.github.io/cljs-scroll-lock).
 
 # Usage
 
@@ -87,8 +87,8 @@ Now the user closes the second (upper) modal and it removes its own scroll lock:
 ```
 
 That's the point on the timeline when a scroll unlocking happens (the second
-modal removes its own lock) but we don't want the scroll to be reenabled again
-because the first modal is still visible on the screen. And of course we don't
+modal removes its own lock) but we do not want the scroll to be reenabled again
+because the first modal is still visible on the screen. And of course we do not
 want the modals to know anything about each other because they are independent
 UI elements. They are as simple as possible: a modal pops up and adds a lock,
 then it closes and removes its own lock.
