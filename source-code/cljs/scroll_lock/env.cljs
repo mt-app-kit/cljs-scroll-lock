@@ -1,7 +1,7 @@
 
 (ns scroll-lock.env
-    (:require [dom.api           :as dom]
-              [scroll-lock.state :as state]))
+    (:require [dom.api :as dom]
+              [common-state.api :as common-state]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -11,7 +11,9 @@
   ;
   ; @return (boolean)
   []
-  (= "true" (dom/get-element-attribute (dom/get-document-element) "data-scroll-locked")))
+  (-> (dom/get-document-element)
+      (dom/get-element-attribute :data-scroll-locked)
+      (= "true")))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -21,7 +23,7 @@
   ;
   ; @return (boolean)
   []
-  (-> @state/PROHIBITIONS empty? not))
+  (-> (common-state/get-state :scroll-lock :prohibitions) empty? not))
 
 (defn scroll-prohibition-added?
   ; @ignore
@@ -30,4 +32,5 @@
   ;
   ; @return (boolean)
   [prohibition-id]
-  (prohibition-id @state/PROHIBITIONS))
+  (-> (common-state/get-state :scroll-lock :prohibitions)
+      (get prohibition-id)))
