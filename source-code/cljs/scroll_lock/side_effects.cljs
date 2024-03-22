@@ -1,11 +1,11 @@
 
 (ns scroll-lock.side-effects
-    (:require [dom.api           :as dom]
+    (:require [common-state.api  :as common-state]
+              [dom.api           :as dom]
               [fruits.css.api    :as css]
               [fruits.math.api   :as math]
               [fruits.string.api :as string]
-              [scroll-lock.env   :as env]
-              [common-state.api :as common-state]))
+              [scroll-lock.env   :as env]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

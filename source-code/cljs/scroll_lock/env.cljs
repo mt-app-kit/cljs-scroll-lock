@@ -1,7 +1,7 @@
 
 (ns scroll-lock.env
-    (:require [dom.api :as dom]
-              [common-state.api :as common-state]))
+    (:require [common-state.api :as common-state]
+              [dom.api          :as dom]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
