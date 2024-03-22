@@ -5,5 +5,5 @@
          mt-utilities/cljc-fruits     {:git/url "https://github.com/mt-utilities/cljc-fruits"
                                        :sha     "6b5c9c060bdff84d0cd0bce908b64b268e5e6f0e"}
          mt-utilities/cljs-dom        {:git/url "https://github.com/mt-utilities/cljs-dom"
-                                       :sha     "2aad0f82d1e681dcd7a7addcae93d99344d99f3c"}
+                                       :sha     "644afffe367f99c8f4f518c61eaad8cb5329fe12"}
          org.clojure/clojurescript    {:mvn/version "1.10.891"}}}
