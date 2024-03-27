@@ -1,9 +1,9 @@
 
 {:paths ["source-code/cljs"]
  :deps  {mt-app-kit/cljc-common-state {:git/url "https://github.com/mt-app-kit/cljc-common-state"
-                                       :sha     "0bcfe521b8d401787aeee7f013b445a61054fcbb"}
+                                       :sha     "3e3be29ad6b8e97ddaad37144ef63dd94c5324d8"}
          bithandshake/cljc-fruits     {:git/url "https://github.com/bithandshake/cljc-fruits"
-                                       :sha     "d29c314aa255da9ab37db81122072b19ff59027e"}
+                                       :sha     "a8b054558a9c01459581b4d2887bb7ee7b5ff1e2"}
          mt-utilities/cljs-dom        {:git/url "https://github.com/mt-utilities/cljs-dom"
-                                       :sha     "d1246ec0819821934e8460b20c0e8d7ff012fb0d"}
+                                       :sha     "c928026768ff1baa5ea172c020b63607f88950b6"}
          org.clojure/clojurescript    {:mvn/version "1.10.891"}}}
